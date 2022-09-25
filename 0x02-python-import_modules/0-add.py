@@ -3,5 +3,5 @@ if __name__ == '__main__':
     from add_0 import add
     a = 1
     b = 2
-    text = "{:d} + {:d} = {:d}\n"
+    text = "{:d} + {:d} = {:d}"
     print(text.format(a, b, add(a, b)))
