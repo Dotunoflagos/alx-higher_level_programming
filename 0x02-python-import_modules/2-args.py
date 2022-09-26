@@ -10,4 +10,4 @@ if __name__ == '__main__':
     elif inputno > 2:
             print(f'{inputno - 1:d} arguments:')
             for i in range(1,inputno):
-                print(f"{i:d}: {argv[i]:s}")
+                print("{:d}: {:s}".format(i, argv[i]))
