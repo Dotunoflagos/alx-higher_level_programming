@@ -4,7 +4,7 @@ if __name__ == '__main__':
 
     inputno = len(argv)
     if inputno == 1:
-        print('0 arguments.')
+        print('0 argument.')
     elif inputno == 2:
         print('1 arguments:')
         print('1: {:s}'.format(argv[1]))
