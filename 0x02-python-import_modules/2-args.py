@@ -6,7 +6,7 @@ if __name__ == '__main__':
     from sys import argv
     inputno = len(argv)
     if inputno == 1:
-        print(f'{inputno - 1:d} arguments.')
+        print('0 arguments.')
     elif inputno == 2:
         print('1 arguments:')
         print(f"1: {argv[1]:s}")
