@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-from this import d
-
-
 if __name__ == '__main__':
     from sys import argv
     inputno = len(argv)
