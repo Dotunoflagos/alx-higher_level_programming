@@ -9,7 +9,7 @@ if __name__ == '__main__':
         print('0 arguments.')
     elif inputno == 2:
         print('1 arguments:')
-        print(f"1: {argv[1]:s}")
+        print('1: {:s}'.format(argv[1]))
     elif inputno > 2:
             print(f'{inputno - 1:d} arguments:')
             for i in range(1,inputno):
