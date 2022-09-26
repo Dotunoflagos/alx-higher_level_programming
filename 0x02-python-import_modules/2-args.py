@@ -10,5 +10,5 @@ if __name__ == '__main__':
         print('1: {:s}'.format(argv[1]))
     elif inputno > 2:
         print('{:d} arguments:'.format(inputno - 1))
-        for i in range(1,inputno):
-            print("{:d}: {:s}".format(i,argv[i]))
+        for i in range(1, inputno):
+            print("{:d}: {:s}".format(i, argv[i]))
