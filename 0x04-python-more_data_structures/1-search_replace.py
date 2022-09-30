@@ -5,4 +5,5 @@ def search_replace(my_list, search, replace):
     while i < len(my_list):
         if final[i] == search:
             final[i] = replace
+        i += 1
     return final
