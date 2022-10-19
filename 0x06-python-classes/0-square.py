@@ -4,4 +4,3 @@ class Square:
     """Empty class"""
     def square():
         """Empty class"""
-    
