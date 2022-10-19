@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-"""Empty class"""
+"""Defines a Square class"""
 
 
 class Square:
-    """Empty class"""
+    """Assign the size variable"""
     def __init__(self, size):
         self.size = size
-    def square():
-        """Empty class"""
