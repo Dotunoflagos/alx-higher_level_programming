@@ -55,9 +55,11 @@ class Square:
         while i < len:
             j = 0
             k = 0
-            while k < pos[0]:
-                print(' ', end='')
-                k += 1
+            if not pos[1] > 0:
+                while k < pos[0]:
+                    print(' ', end='')
+                    k += 1
+
             while j < len:
                 print('#', end='')
                 j += 1
