@@ -47,9 +47,29 @@ class Square:
 
     def my_print(self):
         len = self.size
-        i, j = 0
+        if len == 0:
+            print("")
+        i = 0
         while i < len:
+            j = 0
             while j < len:
-                print("Exception: {}".format('#'))
+                print('#', end='')
                 j += 1
+            
+            print('\n', end='')
             i += 1
+
+my_square = Square(3)
+my_square.my_print()
+
+print("--")
+
+my_square.size = 10
+my_square.my_print()
+
+print("--")
+
+my_square.size = 0
+my_square.my_print()
+
+print("--")
