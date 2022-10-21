@@ -48,7 +48,7 @@ class Square:
 
     def my_print(self):
         len = self.__size
-        pos = self.position
+        pos = self.__position
         if len == 0:
             print("")
         i = 0
@@ -66,10 +66,10 @@ class Square:
             i += 1
     
     @property
-    def size(self):
+    def position(self):
         return self.__position
     
-    @size.setter
+    @position.setter
     def position(self, value):
         try:
             if type(value) != tuple:
