@@ -8,6 +8,7 @@ class Square:
         try:
             if isinstance(size, int) and size >= 0:
                 self.__size = size
+                self.__position = position
             elif isinstance(size, int) and size < 0:
                 raise ValueError('size must be >= 0')
             else:
