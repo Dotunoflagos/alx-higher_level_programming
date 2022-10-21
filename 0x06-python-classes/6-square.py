@@ -52,20 +52,20 @@ class Square:
         if len == 0:
             print("")
         i = 0
-        while i < len:
-            j = 0
-            k = 0
-            if not pos[1] > 0:
+        if not pos[1] > 0:
+            while i < len:
+                j = 0
+                k = 0
                 while k < pos[0]:
                     print(' ', end='')
                     k += 1
 
-            while j < len:
-                print('#', end='')
-                j += 1
+                while j < len:
+                    print('#', end='')
+                    j += 1
 
-            print('\n', end='')
-            i += 1
+                print('\n', end='')
+                i += 1
     
     @property
     def position(self):
