@@ -55,16 +55,15 @@ class Square:
         while i < len:
             j = 0
             k = 0
-            if not pos[1] > 0:
-                while k < pos[0]:
-                    print(' ', end='')
-                    k += 1
+            while k < pos[0]:
+                print(' ', end='')
+                k += 1
 
-                while j < len:
-                    print('#', end='')
-                    j += 1
+            while j < len:
+                print('#', end='')
+                j += 1
 
-                print('\n', end='')
+            print('\n', end='')
             i += 1
     
     @property
@@ -82,18 +81,3 @@ class Square:
                 self.__position = value
         except TypeError:
             raise
-
-my_square_1 = Square(3)
-my_square_1.my_print()
-
-print("--")
-
-my_square_2 = Square(3, (1, 1))
-my_square_2.my_print()
-
-print("--")
-
-my_square_3 = Square(3, (3, 0))
-my_square_3.my_print()
-
-print("--")
