@@ -88,9 +88,3 @@ class Square:
                 self.__position = value
         except TypeError:
             raise
-
-try:
-    my_square = Square(5, "Position")
-    print(my_square.position)
-except Exception as e:
-    print(e)
