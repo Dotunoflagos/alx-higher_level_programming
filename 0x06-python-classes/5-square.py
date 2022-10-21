@@ -55,6 +55,6 @@ class Square:
             while j < len:
                 print('#', end='')
                 j += 1
-            
+
             print('\n', end='')
             i += 1
