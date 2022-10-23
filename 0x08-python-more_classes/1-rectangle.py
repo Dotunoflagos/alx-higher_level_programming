@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Rectangle class"""
-    def __st(self, value, name=""):
+    def st(self, value, name=""):
         if name == "width":
             str = "width"
         elif name == "height":
@@ -21,8 +21,8 @@ class Rectangle:
                 self.__height = value
 
     def __init__(self, width=0, height=0):
-        self.__st(width, "width")
-        self.__st(height, "height")
+        self.st(width, "width")
+        self.st(height, "height")
 
     @property
     def width(self):
@@ -30,7 +30,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        self.__st(value, "width")
+        self.st(value, "width")
 
     @property
     def height(self):
@@ -38,4 +38,4 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        self.__st(value, "height")
+        self.st(value, "height")
