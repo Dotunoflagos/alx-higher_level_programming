@@ -5,24 +5,19 @@
 class Rectangle:
     """Rectangle class"""
     def st(self, value, name=""):
-        if name == "width":
-            str = "width"
-        elif name == "height":
-            str = "height"
-
         if not isinstance(value, int):
-            raise TypeError(f"{str} must be an intiger")
+            raise TypeError(f'{name} must be an intiger')
         elif value < 0:
-            raise ValueError(f"{str} must be >= 0")
-        else:
-            if name == "width":
-                self.__weidth = value
-            elif name == "height":
-                self.__height = value
+            raise ValueError(f'{name} must be >= 0')
+
+        if name == "width":
+            self.__weidth = value
+        elif name == "height":
+            self.__height = value
 
     def __init__(self, width=0, height=0):
-        self.st(width, "width")
-        self.st(height, "height")
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
