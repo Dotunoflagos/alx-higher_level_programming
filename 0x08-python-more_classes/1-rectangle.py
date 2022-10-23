@@ -6,7 +6,7 @@ class Rectangle:
     """Rectangle class"""
     def st(self, value, name=""):
         if not isinstance(value, int):
-            raise TypeError(f'{name} must be an intiger')
+            raise TypeError(f'{name} must be an integer')
         elif value < 0:
             raise ValueError(f'{name} must be >= 0')
         if name == "width":
