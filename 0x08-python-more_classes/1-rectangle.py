@@ -10,18 +10,16 @@ class Rectangle:
         elif name == "height":
             str = "height"
 
-        try:
-            if not isinstance(value, int):
-                raise TypeError("{} must be an intiger".format(str))
-            elif value < 0:
-                raise ValueError("{} must be >= 0".format(str))
-            else:
-                if name == "width":
-                    self.__weidth = value
-                elif name == "height":
-                    self.__height = value
-        except Exception:
-            raise
+        if not isinstance(value, int):
+            raise TypeError("{} must be an intiger".format(str))
+        elif value < 0:
+            raise ValueError("{} must be >= 0".format(str))
+        else:
+            if name == "width":
+                self.__weidth = value
+            elif name == "height":
+                self.__height = value
+
 
     def __init__(self, width=0, height=0):
         self.__st(width, "width")
