@@ -11,9 +11,9 @@ class Rectangle:
             str = "height"
 
         if not isinstance(value, int):
-            raise TypeError("{} must be an intiger".format(str))
+            raise TypeError(f"{str} must be an intiger")
         elif value < 0:
-            raise ValueError("{} must be >= 0".format(str))
+            raise ValueError(f"{str} must be >= 0")
         else:
             if name == "width":
                 self.__weidth = value
