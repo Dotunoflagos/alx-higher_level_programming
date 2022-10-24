@@ -64,6 +64,3 @@ class Rectangle:
     def __del__(self):
         print('Bye rectangle...')
         Rectangle.number_of_instances -= 1
-my_rectangle_1 = Rectangle(8, 4)
-my_rectangle_1.print_symbol = 89
-print(my_rectangle_1)
