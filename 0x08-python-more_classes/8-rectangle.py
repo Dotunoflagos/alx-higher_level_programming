@@ -69,7 +69,9 @@ class Rectangle:
 
         def ck(rect, x):
             if type(rect) != Rectangle:
-                raise TypeError('{} must be an instance of Rectangle'.format(x))
+                raise TypeError(
+                    '{} must be an instance of Rectangle'.format(x)
+                    )
 
         ck(rect_1, "rect_1")
         ck(rect_2, "rect_2")
