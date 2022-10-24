@@ -5,7 +5,7 @@
 class Rectangle:
     """Rectangle class"""
     number_of_instances = 0
-    print_symbol = "#"
+    print_symbol = '#'
 
     def st(self, value, name=""):
         if not isinstance(value, int):
@@ -18,7 +18,6 @@ class Rectangle:
             self.__height = value
 
     def __init__(self, width=0, height=0):
-        self.print_symbol = Rectangle.print_symbol
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
@@ -53,7 +52,7 @@ class Rectangle:
         strg = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                strg += self.print_symbol
+                strg += str(self.print_symbol)
             if i != self.__height - 1:
                 strg += '\n'
         return strg
@@ -65,3 +64,6 @@ class Rectangle:
     def __del__(self):
         print('Bye rectangle...')
         Rectangle.number_of_instances -= 1
+my_rectangle_1 = Rectangle(8, 4)
+my_rectangle_1.print_symbol = 89
+print(my_rectangle_1)
