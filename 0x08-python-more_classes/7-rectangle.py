@@ -18,6 +18,7 @@ class Rectangle:
             self.__height = value
 
     def __init__(self, width=0, height=0):
+        self.print_symbol = Rectangle.print_symbol
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
@@ -52,7 +53,7 @@ class Rectangle:
         strg = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                strg += Rectangle.print_symbol
+                strg += self.print_symbol
             if i != self.__height - 1:
                 strg += '\n'
         return strg
