@@ -5,7 +5,7 @@
 class Rectangle:
     """Rectangle class"""
     number_of_instances = 0
-    
+
     def st(self, value, name=""):
         if not isinstance(value, int):
             raise TypeError(f'{name} must be an integer')
@@ -15,11 +15,11 @@ class Rectangle:
             self.__width = value
         elif name == "height":
             self.__height = value
-        number_of_instances += 1
 
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -62,4 +62,4 @@ class Rectangle:
 
     def __del__(self):
         print('Bye rectangle...')
-        number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
