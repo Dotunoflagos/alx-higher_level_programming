@@ -18,13 +18,19 @@ Now use it:
     -3
 
     >>> print(add_integer("1", 2))
+    Traceback (most recent call last):
+    	      ...
     TypeError: a must be an integer
 
     >>> print(add_integer(1, "2"))
+    Traceback (most recent call last):
+    	      ...
     TypeError: b must be an integer
 
     >>> print(add_integer(None))
-    TypeError: b must be an integer
+    Traceback (most recent call last):
+    	      ...
+    TypeError: a must be an integer
 
     >>> print(add_integer(100, -2))
     98
