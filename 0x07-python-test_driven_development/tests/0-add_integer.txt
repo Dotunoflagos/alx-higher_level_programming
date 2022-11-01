@@ -1,0 +1,33 @@
+======================
+Doctest Integers addition
+======================
+
+Import the function:
+
+       >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+    >>> print(add_integer(1 ))
+    99
+    
+    >>> print(add_integer(1, 2))
+    3
+
+    >>> print(add_integer(-1, -2))
+    -3
+
+    >>> print(add_integer("1", 2))
+    TypeError: a must be an integer
+
+    >>> print(add_integer(1, "2"))
+    TypeError: b must be an integer
+
+    >>> print(add_integer(None))
+    TypeError: b must be an integer
+
+    >>> print(add_integer(100, -2))
+    98
+    
+    >>> print(add_integer(100.3, -2))
+    98
