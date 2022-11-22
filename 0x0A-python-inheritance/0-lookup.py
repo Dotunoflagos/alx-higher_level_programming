@@ -8,4 +8,4 @@ def lookup(obj):
     """
     Returns that list of attributes and methods.
     """
-    return obj.__dict__
+    return dir(obj)
