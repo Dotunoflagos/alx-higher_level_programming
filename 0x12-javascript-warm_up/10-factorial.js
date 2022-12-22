@@ -1,14 +1,16 @@
 #!/usr/bin/node
 const value = Number(process.argv[2]);
-let total = 1;
 
 function add (a) {
-  if (!a) {
-    return;
+  if (a === 0) {
+    return (1);
+  } else {
+    return (a * add(a - 1));
   }
-  total = total * a;
-  add(a - 1);
 }
 
-add(value);
-console.log(total);
+if (isNaN(value)) {
+    console.log('1');
+  } else {
+    console.log(add(value));
+  }
