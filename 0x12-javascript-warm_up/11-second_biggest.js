@@ -17,5 +17,5 @@ if (int === undefined || length < 4) {
       bigest2nd = int[i];
     }
   }
-console.log(bigest2nd);
+  console.log(bigest2nd);
 }
