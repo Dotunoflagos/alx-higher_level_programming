@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""method for student creation"""
+"""module to read a text file"""
 
 
 def read_file(filename=""):
-    """method for student creation"""
-
-    with open(filename, "r", encoding="UTF-8") as f:
-        print(f.read(), end="")
+    """reads a text file and prints it"""
+    with open(filename, encoding="utf-8") as f:
+        for line in f:
+            print(line, end="")

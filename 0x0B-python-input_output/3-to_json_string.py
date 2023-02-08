@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""method for student creation"""
-
-
+"""returns json representation of an object(string)"""
 import json
 
 
 def to_json_string(my_obj):
-    """method for student creation"""
-
-    return json.dumps(my_obj)
+    """returns the json representation of an object"""
+    data = json.dumps(my_obj)
+    return data

@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""method for student creation"""
+"""this module appends a string at end of a text file"""
 
 
 def append_write(filename="", text=""):
-    """method for student creation"""
-
-    with open(filename, "a", encoding="utf-8") as f:
+    """appends a string at the end of a text file"""
+    with open(filename, mode="a+", encoding="utf-8") as f:
         return f.write(text)
