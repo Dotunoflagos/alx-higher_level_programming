@@ -26,5 +26,5 @@ if r._Rectangle__y != 0:
 if r.id != 1:
     print("ID is not initialized at 1")
     exit(1)
-
-print("OK", end="\n")
+r.print()
+print("OK", end="")
