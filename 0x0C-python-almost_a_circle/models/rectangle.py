@@ -98,13 +98,10 @@ class Rectangle(Base):
                     key = "{}".format(value)
 
                 self.__dict__[key] = args[index]
-        elif kwargs:
-            length = len(kwargs)
-
+        else:
             for key, value in kwargs.items():
-                if not kwargs == "id":
+                if key != "id":
                     ke = "_Rectangle__{}".format(key)
                 else:
-                    ke = "{}".format(value)
-
+                    ke = "{}".format(key)
                 self.__dict__[ke] = value
