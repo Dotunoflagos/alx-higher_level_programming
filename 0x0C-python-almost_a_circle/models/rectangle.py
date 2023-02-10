@@ -82,17 +82,29 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update rectangle"""
-        length = len(args)
-        keys = ["id", "width", "height", "x", "y"]
-        newkey = keys[:length]
 
-        for index in range(length):
-            value = newkey[index]
-            if index > 0:
-                key = "_Rectangle__{}".format(value)
-            else:
-                key = "{}".format(value)
+        if args:
+            length = len(args)
+            keys = ["id", "width", "height", "x", "y"]
+            newkey = keys[:length]
 
-            self.__dict__[key] = args[index]
+            for index in range(length):
+                value = newkey[index]
+                if index > 0:
+                    key = "_Rectangle__{}".format(value)
+                else:
+                    key = "{}".format(value)
+
+                self.__dict__[key] = args[index]
+        elif kwargs:
+            length = len(kwargs)
+
+            for key, value in kwargs.items():
+                if not kwargs == "id":
+                    ke = "_Rectangle__{}".format(key)
+                else:
+                    ke = "{}".format(value)
+
+                self.__dict__[ke] = value
