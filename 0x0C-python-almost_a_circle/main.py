@@ -1,28 +1,13 @@
 #!/usr/bin/python3
-""" Check """
+""" 4-main """
 from models.rectangle import Rectangle
 
-r = Rectangle(12, 14, 4, 5, 10)
-if r is None:
-    print("Can't create Rectangle")
-    exit(1)
+if __name__ == "__main__":
 
-if r._Rectangle__width != 12:
-    print("Wrong private width: {}".format(r._Rectangle__width))
-    exit(1)
+    r1 = Rectangle(4, 6)
+    r1.display()
 
-if r.width != 12:
-    print("Wrong width getter: {}".format(r._Rectangle__width))
-    exit(1)
+    print("---")
 
-r.width = 5
-
-if r._Rectangle__width != 5:
-    print("Wrong private width: {}".format(r._Rectangle__width))
-    exit(1)
-
-if r.width != 5:
-    print("Wrong width getter: {}".format(r._Rectangle__width))
-    exit(1)
-
-print("OK", end="")
+    r1 = Rectangle(2, 2)
+    r1.display()
