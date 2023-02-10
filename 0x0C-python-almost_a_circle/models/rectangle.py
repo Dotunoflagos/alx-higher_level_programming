@@ -23,6 +23,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, width):
+        self.int_validation("width", width)
         self.__width = width
 
     @property
@@ -31,6 +32,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
+        self.int_validation("height", height)
         self.__height = height
 
     @property
@@ -39,6 +41,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, x):
+        self.int_validation("x", x)
         self.__x = x
 
     @property
@@ -47,4 +50,14 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, y):
+        self.int_validation("y", y)
         self.__y = y
+
+    def int_validation(self, name, value):
+        """Validates input"""
+        if type(value) is not int:
+            raise TypeError("{:s} must be an integer".format(name))
+        if (name == "height" or name == "width") and value <= 0:
+            raise ValueError("{:s} must be > 0".format(name))
+        if (name == "y" or name == "x") and value < 0:
+            raise ValueError("{:s} must be >= 0".format(name))
