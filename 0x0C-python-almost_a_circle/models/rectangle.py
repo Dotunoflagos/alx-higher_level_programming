@@ -78,10 +78,12 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
+        """Print rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args):
+        """Update rectangle"""
         length = len(args)
         keys = ["id", "width", "height", "x", "y"]
         newkey = keys[:length]
@@ -92,5 +94,5 @@ class Rectangle(Base):
                 key = "_Rectangle__{}".format(value)
             else:
                 key = "{}".format(value)
-                
+
             self.__dict__[key] = args[index]
