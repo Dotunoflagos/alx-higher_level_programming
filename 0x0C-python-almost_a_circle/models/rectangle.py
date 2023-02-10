@@ -80,3 +80,17 @@ class Rectangle(Base):
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        length = len(args)
+        keys = ["id", "width", "height", "x", "y"]
+        newkey = keys[:length]
+
+        for index in range(length):
+            value = newkey[index]
+            if index > 0:
+                key = "_Rectangle__{}".format(value)
+            else:
+                key = "{}".format(value)
+                
+            self.__dict__[key] = args[index]
