@@ -1,16 +1,24 @@
 #!/usr/bin/python3
-""" Check """
-from models.rectangle import Rectangle
+""" 9-main """
+from models.square import Square
 
-r = Rectangle(10, 12)
-if r.id != 1:
-    print("ID must be equal to 1: {}".format(r.id))
-    exit(1)
+if __name__ == "__main__":
 
-r.update(id=12)
+    s1 = Square(5)
+    print(s1)
+    print(s1.area())
+    s1.display()
 
-if r.id != 12:
-    print("ID must be updated to 12: {}".format(r.id))
-    exit(1)
-    
-print("OK", end="")
+    print("---")
+
+    s2 = Square(2, 2)
+    print(s2)
+    print(s2.area())
+    s2.display()
+
+    print("---")
+
+    s3 = Square(3, 1, 3)
+    print(s3)
+    print(s3.area())
+    s3.display()
