@@ -19,7 +19,6 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        print("getter method called")
         return self.__width
 
     @width.setter
