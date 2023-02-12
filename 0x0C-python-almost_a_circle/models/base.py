@@ -27,6 +27,11 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         filen = "{}.json".format(cls.__name__)
+        if list_objs == "[]" or list_objs == None or list_objs == "":
+            with open(filen, "w") as f:
+                f.write("[]")
+            return
+
         save = []
         with open(filen, "w") as f:
             for ob in list_objs:
