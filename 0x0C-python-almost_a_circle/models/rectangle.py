@@ -105,3 +105,11 @@ class Rectangle(Base):
                 else:
                     ke = "{}".format(key)
                 self.__dict__[ke] = value
+
+    def to_dictionary(self):
+        dic = self.__dict__
+        dic["width"] = dic.pop("_Rectangle__width")
+        dic["height"] = dic.pop("_Rectangle__height")
+        dic["x"] = dic.pop("_Rectangle__x")
+        dic["y"] = dic.pop("_Rectangle__y")
+        return dic
