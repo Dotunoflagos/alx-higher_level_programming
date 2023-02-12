@@ -9,8 +9,8 @@ file_path = "Rectangle.json"
 if os.path.exists(file_path):
     os.remove(file_path)
 
-list_objs = None
-expected_list = []
+list_objs = [Rectangle(3, 4), Rectangle(5, 8, 1), Rectangle(9, 1, 3, 2)]
+expected_list = [i.to_dictionary() for i in list_objs]
 Rectangle.save_to_file(list_objs)
 
 if not os.path.exists(file_path):
