@@ -3,6 +3,7 @@
 Base model
 """
 import json
+import os
 
 
 class Base:
@@ -22,3 +23,12 @@ class Base:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        filen = "{}.json".format(cls.__name__)
+        save = []
+        with open(filen, "w") as f:
+            for ob in list_objs:
+                save.append(ob.to_dictionary())
+            f.write(cls.to_json_string(save))
