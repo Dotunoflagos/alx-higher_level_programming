@@ -3,6 +3,7 @@
 Base model
 """
 import json
+import os
 
 
 class Base:
@@ -53,3 +54,13 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+    
+    @classmethod
+    def load_from_file(cls):
+        """file to instances"""
+        if not os.path.exists(cls.__name__ + ".json"):
+            return []
+        with open(cls.__name__ + ".json", "r") as file:
+            stuff = cls.from_json_string(file.read())
+        return [cls.create(**index) for index in stuff]
+        
