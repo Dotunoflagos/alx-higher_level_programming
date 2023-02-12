@@ -1,25 +1,16 @@
 #!/usr/bin/python3
-""" Check """
+""" 10-main """
 from models.square import Square
 
-s = Square(2)
-if str(s) != "[Square] (1) 0/0 - 2":
-    print("__str__ is not correctly overloaded: {}".format(s))
-    exit(1)
+if __name__ == "__main__":
 
-s = Square(2, 3)
-if str(s) != "[Square] (2) 3/0 - 2":
-    print("__str__ is not correctly overloaded: {}".format(s))
-    exit(1)
+    s1 = Square(5)
+    print(s1)
+    print(s1.size)
+    s1.size = 10
+    print(s1)
 
-s = Square(2, 3, 4)
-if str(s) != "[Square] (3) 3/4 - 2":
-    print("__str__ is not correctly overloaded: {}".format(s))
-    exit(1)
-
-s = Square(2, 3, 4, 89)
-if str(s) != "[Square] (89) 3/4 - 2":
-    print("__str__ is not correctly overloaded: {}".format(s))
-    exit(1)
-
-print("OK", end="")
+    try:
+        s1.size = "9"
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
