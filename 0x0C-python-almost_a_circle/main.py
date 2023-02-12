@@ -1,25 +1,29 @@
 #!/usr/bin/python3
-""" Check """
+""" 11-main """
 from models.square import Square
 
-s = Square(12)
-if s is None:
-    print("Can't create Square")
-    exit(1)
+if __name__ == "__main__":
 
-for attribute in list(s.__dict__.keys()):
-    if "size" in attribute:
-        print("You are not allowed to add any new attribute for size: {}".format(attribute))
-        exit(1)
+    s1 = Square(5)
+    print(s1)
 
-if s.size != 12:
-    print("Wrong size getter: {}".format(s.size))
-    exit(1)
+    s1.update(10)
+    print(s1)
 
-s.size = 5
+    s1.update(1, 2)
+    print(s1)
 
-if s.size != 5:
-    print("Wrong size getter: {}".format(s.size))
-    exit(1)
+    s1.update(1, 2, 3)
+    print(s1)
 
-print("OK", end="")
+    s1.update(1, 2, 3, 4)
+    print(s1)
+
+    s1.update(x=12)
+    print(s1)
+
+    s1.update(size=7, y=1)
+    print(s1)
+
+    s1.update(size=7, id=89, y=1)
+    print(s1)

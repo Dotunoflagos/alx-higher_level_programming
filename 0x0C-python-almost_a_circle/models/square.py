@@ -29,3 +29,34 @@ class Square(Rectangle):
         """Print Square"""
         return "[Square] ({}) {}/{} - {}"\
             .format(self.id, self.x, self.y, self.width)
+
+    def update(self, *args, **kwargs):
+        """Update rectangle"""
+
+        if args:
+            length = len(args)
+            keys = ["id", "size", "x", "y"]
+            newkey = keys[:length]
+
+            for index in range(length):
+                value = newkey[index]
+                if index == 1:
+                    self.size = args[index]
+                    continue
+                elif index > 0:
+                    key = "_Rectangle__{}".format(value)
+                else:
+                    key = "{}".format(value)
+
+                self.__dict__[key] = args[index]
+        else:
+            for key, value in kwargs.items():
+                if key == "size":
+                    self.size = value
+                    continue
+                elif key != "id":
+                    ke = "_Rectangle__{}".format(key)
+                else:
+                    ke = "{}".format(key)
+
+                self.__dict__[ke] = value
