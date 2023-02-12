@@ -37,3 +37,10 @@ class Base:
             for ob in list_objs:
                 save.append(ob.to_dictionary())
             f.write(cls.to_json_string(save))
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string == "[]" or json_string is None or json_string == "":
+            return "[]"
+
+        return json.loads(json_string)
