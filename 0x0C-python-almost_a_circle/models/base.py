@@ -3,7 +3,6 @@
 Base model
 """
 import json
-import os
 
 
 class Base:
@@ -44,3 +43,9 @@ class Base:
             return []
 
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        dummy = cls(1,1)
+        dummy.update(**dictionary)
+        return dummy
