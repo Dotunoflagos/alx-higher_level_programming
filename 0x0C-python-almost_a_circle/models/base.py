@@ -54,7 +54,7 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
-    
+
     @classmethod
     def load_from_file(cls):
         """file to instances"""
@@ -63,4 +63,3 @@ class Base:
         with open(cls.__name__ + ".json", "r") as file:
             stuff = cls.from_json_string(file.read())
         return [cls.create(**index) for index in stuff]
-        
