@@ -63,7 +63,7 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """Returs dict rep"""
-        dic = self.__dict__
+        dic = dict(self.__dict__)
         dic.pop("_Rectangle__width")
         dic["size"] = dic.pop("_Rectangle__height")
         dic["x"] = dic.pop("_Rectangle__x")
