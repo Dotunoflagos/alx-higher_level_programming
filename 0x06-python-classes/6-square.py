@@ -26,7 +26,10 @@ class Square:
             else:
                 self.__position = position
         except Exception as e:
-            print(e)
+            if type(e) == IndexError:
+                print("position must be a tuple of 2 positive integers")
+            else:
+                print(e)
 
     """Returnes size of square"""
     @property
