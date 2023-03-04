@@ -16,8 +16,7 @@ class Square:
                 raise TypeError('size must be an integer')
 
             if not isinstance(position, tuple) \
-                    or not all(isinstance(p, int) for p in position)\
-                        or all(p is None for p in position):
+                    or not all(isinstance(p, int) for p in position):
                 raise TypeError(
                     'position must be a tuple of 2 positive integers')
             elif len(position) < 0 \
