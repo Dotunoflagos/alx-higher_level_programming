@@ -58,4 +58,4 @@ class Square:
             print("#" * self.__size)
 
     def __str__(self):
-        return self.my_print()
+        return self.my_print(self.size)
