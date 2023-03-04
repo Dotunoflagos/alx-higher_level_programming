@@ -72,7 +72,7 @@ class Square:
                 print("#", end="")
             print()
 
-     @property
+    @property
     def position(self):
         return self.__position
 
