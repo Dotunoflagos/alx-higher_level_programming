@@ -57,40 +57,29 @@ class Square:
         except Exception as e:
             print(e)
 
-    def my_print(self):
-        len = self.__size
-        pos = self.__position
-        if len == 0:
-            print("")
-        i = 0
-        while i < len:
-            j = 0
-            k = 0
-            while k < pos[0]:
-                print(' ', end='')
-                k += 1
-
-            while j < len:
-                print('#', end='')
-                j += 1
-
-            print('\n', end='')
-            i += 1
-
     @property
     def position(self):
         return self.__position
 
     @position.setter
     def position(self, value):
-        try:
-            if type(value) != tuple:
-                raise TypeError(
-                    'position must be a tuple of 2 positive integers')
-            elif len(value) < 2 or len(value) > 2 or value[0] < 0 or value[1] < 0:
-                raise TypeError(
-                    'position must be a tuple of 2 positive integers')
-            else:
-                self.__position = value
-        except Exception as e:
-            print(e)
+        if not isinstance(value, tuple) or len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not all(isinstance(i, int) and i >= 0 for i in value):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
+
+    def my_print(self):
+        if self.__size == 0:
+            print()
+            return
+
+        for i in range(self.__position[1]):
+            print()
+
+        for i in range(self.__size):
+            for j in range(self.__position[0]):
+                print(" ", end="")
+            for j in range(self.__size):
+                print("#", end="")
+            print()
