@@ -1,6 +1,6 @@
 #!/bin/bash
-
 # Read URL from user input
+
 read -p "Enter URL: " url
 
 # Send request using curl and save response to a variable
