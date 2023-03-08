@@ -1,3 +1,3 @@
 #!/bin/bash
 # Read URL from user input
-curl -s $1 | wc -c
+curl -sI "$1" | grep -i Content-Length | awk '{print $2}'
