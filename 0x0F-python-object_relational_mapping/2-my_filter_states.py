@@ -14,8 +14,8 @@ if __name__ == "__main__":
         charset="utf8")
     cur = conn.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE name COLLATE Latin1_General_CS_AS = '%%{userinput}%%' \
-ORDER BY id ASC".format(
+        "SELECT * FROM states WHERE name LIKE '%%{userinput}%%' \
+ORDER BY id ASC COLLATE NOCASE".format(
             userinput=sys.argv[4]))
     query_rows = cur.fetchall()
     for row in query_rows:
